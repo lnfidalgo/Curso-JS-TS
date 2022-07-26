@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(36, 48, 161);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+p {
+  line-height: 1.8em;
+}
+
+.wrapper {
+  width: 500px;
+  background-color: white;
+  padding-inline: 25px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  margin-top: 30px;
+  margin-inline: auto;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#inicio {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.conteudo1 {
+  margin-right: 150px;
+  font-size: 1.2em;
+}
+
+.conteudo2 {
+  font-size: 1.2em;
+}
+
+#peso,
+#altura {
+  font-size: 18px;
+}
+
+#peso_box {
+  height: 25px;
+  margin-bottom: 15px;
+  width: 496px;
+}
+
+#altura_box {
+  height: 25px;
+  margin-bottom: 30px;
+  width: 496px;
+}
+
+#botao {
+  background-color: rgba(36, 49, 161, 0.616);
+  padding-block: 10px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.paragrafo_positivo,
+.paragrafo_negativo {
+  background-color: rgb(170, 255, 85);
+  padding: 10px 20px;
+}
+
+.paragrafo_negativo {
+  background-color: rgb(214, 107, 128);
+}
