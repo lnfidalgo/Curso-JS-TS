@@ -12,9 +12,14 @@ body {
   box-shadow: 5px 4px rgba(0, 0, 0, 0.432);
 }
 
+h1 {
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .display {
   font-size: 2em;
-  width: 100%;
+  text-align: right;
 }
 
 .btn {
@@ -25,7 +30,7 @@ body {
   cursor: pointer;
 }
 
-.btn_eql {
+.btn_eq {
   background-color: rgb(127, 197, 255);
 }
 
@@ -33,6 +38,6 @@ body {
   background-color: rgb(153, 156, 149);
 }
 
-.btn_eql:hover {
+.btn_eq:hover {
   background-color: rgb(0, 68, 255);
 }
