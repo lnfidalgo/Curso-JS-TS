@@ -1,0 +1,13 @@
+.section-one {
+  background-color: blueviolet;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  border: 5px solid yellow;
+  color: white;
+}
+
+.section-two {
+  background-color: deeppink;
+}

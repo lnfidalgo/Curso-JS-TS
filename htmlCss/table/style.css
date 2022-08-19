@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 800px;
+}
+
+caption {
+  caption-side: bottom;
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+}
+
+.table-responsive {
+  margin: 15px;
+  overflow-x: scroll;
+  max-width: 100%;
+}
+
+.brincando {
+  background-color: blueviolet;
+}
+
+table thead tr th {
+  text-align: left;
+  border: 1px solid rgb(158, 158, 158);
+  background-color: aqua;
+}
+
+table td, table th {
+  padding: 5px;
+}
+
+th {
+  font-size: 18px;
+}
+
+td {
+  border: 1px solid rgb(158, 158, 158);
+}
+
+tfoot {
+  background-color: darkgrey;
+}
