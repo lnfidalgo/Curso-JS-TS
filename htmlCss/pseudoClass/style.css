@@ -1,0 +1,49 @@
+body {
+  font-size: 25px;
+}
+
+.head {
+  color: aqua;
+  transition: all 800ms ease-in-out;
+}
+
+.head:hover {
+  background-color: blue;
+}
+
+a:link {
+  color: chocolate;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: crimson;
+}
+
+input:checked + p {
+  background-color: blueviolet;
+}
+
+h2:nth-child(even) {
+  background-color: darkcyan;
+}
+
+h2:nth-child(odd) {
+  background-color: darkgreen;
+}
+
+h2:nth-child(3n) {
+  background-color: darkorange;
+}
+
+h2:nth-child(5n + 4) {
+  background-color: darkturquoise;
+}
+
+h2:not(.testando) {
+  color: darkmagenta;
+}    
