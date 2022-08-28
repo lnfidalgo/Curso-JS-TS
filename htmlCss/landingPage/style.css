@@ -4,59 +4,110 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  font-size: 62.5%;
 }
 
-div {
-  background-color: rgb(43, 43, 43);
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.menu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 0.1rem solid #eeeeee;
+}
+
+.menu-bar {
   display: flex;
-  height: 70px;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  width: 130rem;
+  margin-inline: auto;
+  padding: 2rem;
 }
 
 .logo {
-  margin-left: 60px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-ul {
-  display: flex;
-  gap: 20px;
-  list-style-type: none;
-  margin-right: 40px;
+.logo a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  color: black;
+  text-decoration: none;
 }
 
-ul li a {
+.menu-links {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.menu-links li a {
   text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
   align-items: center;
   justify-content: center;
-  background-color: rgb(185, 182, 178);
+  background-color: #94a9f0;
   display: flex;
-  height: 40px;
-  width: 80px;
-  border-radius: 15px;
+  height: 4rem;
+  width: 9rem;
+  border-radius: 1.5rem;
   border: none;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-a:hover {
-  background-color: grey;
+.menu-links a:hover {
+  background-color: rgb(69, 98, 192);
 }
 
-#main {
-  background-color: bisque;
+.main-bg {
+  background-image: url(assets/img/main-bg.svg);
+  background-position: center center;
 }
-#main header {
+
+.white-bg {
   background-color: white;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
-#main header h2,
-#main header p {
-  text-align: center;
+.section-height {
+  min-height: 100vh;
+}
+
+.grid-header {
+  
+}
+
+.grid-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 5rem;
+  padding-top: 7rem;
+}
+
+.grid-header p {
+  font-size: 2rem;
+}
+
+.grid-header h1,
+.grid-header p {
+  color: white;
+}
+
+.grid-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
 }
