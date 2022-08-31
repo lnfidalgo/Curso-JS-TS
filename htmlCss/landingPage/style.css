@@ -287,7 +287,6 @@ tfoot td {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 4rem;
-
 }
 
 .contactUs-text p {
@@ -385,18 +384,123 @@ tfoot td {
   height: 8rem;
 }
 
+.close-menu {
+  display: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: #0a1128;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  text-decoration: none;
+  transform: rotate(-90deg);
+  border: 0.1rem solid #0a1128;
+  font-size: 2.5rem;
+}
+
 @media (max-width: 870px) {
-  .grid-intro, .grid-content {
+  .grid-intro,
+  .grid-content {
     grid-template-columns: 1fr;
+    display: grid;
+    gap: 3rem;
+    min-height: 100vh;
   }
 
-  .gallery-images { 
-    width: 100%;
+  .intro-text h1 {
+    padding-top: 0;
+    font-size: 6rem;
+  }
+
+  .intro-img img {
+    height: 35rem;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .img {
     max-width: 100%;
+    width: 100%;
     max-height: 100%;
   }
-  
-  .img  {
+
+  .img img {
     width: 100%;
+  }
+
+  .menu {
+    bottom: 0;
+    text-align: center;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-bar {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .menu-bar p {
+    margin-bottom: 1rem;
+  }
+
+  .menu-bar ul {
+    flex-direction: column;
+  }
+
+  .close-menu-label::after {
+    content: '☰';
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    z-index: 2;
+    height: 4rem;
+    width: 4rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    cursor: pointer;
+    background-color: #0a1128;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .close-menu:checked~.menu {
+    display: block;
+  }
+
+  .close-menu:checked~.close-menu-label::after {
+    content:'✖';
+  }
+}
+
+@media (max-width: 644px) {
+  .intro-img img {
+    height: 28rem;
+  }
+
+  .intro-text h1 {
+    padding-top: 0;
+    font-size: 5.5rem;
+  }
+
+  .intro-text p {
+    font-size: 2rem;
   }
 }
