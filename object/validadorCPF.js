@@ -13,6 +13,7 @@ ValidatorCPF.prototype.valida = function () {
   
   //Chamar o método para ele iniciar
   const digito1 = this.criaDigito(cpfSemDigito)
+  console.log(digito1)
   const digito2 = this.criaDigito(cpfSemDigito+ digito1)
 
   const cpfNovo = `${cpfSemDigito}${digito1}${digito2}`
@@ -39,7 +40,6 @@ ValidatorCPF.prototype.isSequencia = function() {
 }
 
 const cpf = new ValidatorCPF('705.484.450-52')
-
 if (cpf.valida()) {
   console.log('CPF válido')
 } else {
