@@ -5,23 +5,29 @@
 }
 
 .main {
-  padding: 40px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
-  width: 1300px;
-  height: 100vh;
+  width: 500px;
+  height: 500px;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
 .teste {
-  width: 400px;
-  height: auto;
-  background-color: aquamarine;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgb(150, 127, 255);
+  height: 500px;
+  width: 500px;
+
 }
 
 .teste2 {
-  width: 800px;
-  height: 400px;
-  background-color: blue;
+  background-color: rgb(53, 53, 252);
+  border-top: 5px solid black;
+  width: 500px;
+  height: 50px;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(74, 71, 255);
+}
+
+.wrapper {
+  background-color: white;
+  margin-top: 50px;
+  margin-inline: auto;
+  width: 500px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 4px rgba(0, 0, 0, 0.432);
+}
+
+table {
+  width: 100%;
+}
