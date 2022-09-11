@@ -1,4 +1,3 @@
-// 705.484.450-52 070.987.720-03
 function ValidatorCPF(cpfDigitado) {
   Object.defineProperty(this, 'cpfLimpo', {
     get: () => cpfDigitado.replace(/\D+/g, '')

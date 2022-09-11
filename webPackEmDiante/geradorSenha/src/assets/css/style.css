@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(36, 48, 161);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.wrapper {
+  width: 500px;
+  background-color: white;
+  padding-inline: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-inline: auto;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs label {
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+input {
+  cursor: pointer;
+}
+
+.gerar-senha {
+  padding: 5px;
+}
