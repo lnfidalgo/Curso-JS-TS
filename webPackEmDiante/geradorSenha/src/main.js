@@ -1,6 +1,4 @@
 import './assets/css/style.css'
-import { caracter, lower, number, symbol, upper, senhaGerada } from './modules/inputs'
+import form from './modules/form'
 
-class GeraSenha {
-  
-}
+form()

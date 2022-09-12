@@ -1,6 +1,0 @@
-export const senhaGerada = document.querySelector('.senha-gerada')
-export const caracter = document.querySelector('#caracter')
-export const number = document.querySelector('#number')
-export const upper = document.querySelector('#upper')
-export const lower = document.querySelector('#lower')
-export const symbol = document.querySelector('#symbol')
