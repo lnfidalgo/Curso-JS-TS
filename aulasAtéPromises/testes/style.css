@@ -5,68 +5,15 @@
 }
 
 section {
-  display: flex;
-  width: 1000px;
-  margin-inline: auto;
-}
-
-.texto {
   width: 500px;
-  margin-top: 20px;
-}
-.main {
-  width: 300px;
-  height: 600px;
+  height: 500px;
   margin-inline: auto;
+}
+
+form {
   display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  flex-direction: colum;
 }
-
-.teste img {
-  display: flex;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: rgb(150, 127, 255);
-}
-
-h2 {
-  position: absolute;
-  margin-top: 280px;
-  margin-left: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: blueviolet;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-h3 {
-  position: absolute;
-  margin-left: 220px;
-  margin-top: 20px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: blueviolet;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.teste2 {
-  background-color: rgb(53, 53, 252);
-  border-top: 5px solid black;
-  width: inherit;
-  height: 150px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.teste2 h1 {
-  margin-top: 10px;
-  color: white;
+.resultado-verde {
+  background-color: aqua;
 }
