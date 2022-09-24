@@ -20,18 +20,26 @@ function brincadeira() {
 
   if (palpiteUsuario === numeroGerado) {
     ultimoResultado.textContent = "Parabéns, você ganhou!"
-    ultimoResultado.style.backgroundColor = 'green'
-    baixoOuAlto.textContent = ''
+    ultimoResultado.style.backgroundColor = "green"
+    baixoOuAlto.textContent = ""
     resetGame()
   } else if (contagemPalpites === 10) {
     ultimoResultado.textContent = "O miserável não é um gênio!!"
-    baixoOuAlto.textContent = ''
+    baixoOuAlto.textContent = ""
     resetGame()
-  } else { palpiteUsuario > numeroGerado} {
-    ultimoResultado.textContent = "O seu palpite está alto"
+  } else {
+    ultimoResultado.textContent = "Eroooou!!!"
+    ultimoResultado.style.backgroundColor = "red"
+    if (palpiteUsuario > numeroGerado) {
+      baixoOuAlto.textContent = "O seu palpite está alto"
+    } else if (palpiteUsuario < numeroGerado) {
+      baixoOuAlto.textContent = "O seu palpite está baixo"
+    }
   }
 
-
+  contagemPalpites++
+  campoPalpite.value = ''
+  campoPalpite.focus()
 }
 
 envioPalpite.addEventListener("click", brincadeira)

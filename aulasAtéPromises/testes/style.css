@@ -11,7 +11,7 @@
   border-radius: 5px;
   margin-top: 50px;
   margin-left: 50px;
-  background-color: rgb(162, 188, 238);
+  background-color: rgb(203, 216, 241);
 }
 .jogo {
   display: flex;
@@ -27,4 +27,5 @@
 .resultadoCorreto {
   color: green;
   font-weight: bold;
+  font-style: ;
 }
