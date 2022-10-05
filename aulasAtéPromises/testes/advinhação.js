@@ -22,11 +22,11 @@ function brincadeira() {
     ultimoResultado.textContent = "Parabéns, você ganhou!"
     ultimoResultado.style.backgroundColor = "green"
     baixoOuAlto.textContent = ""
-    resetGame()
+    endGame()
   } else if (contagemPalpites === 10) {
     ultimoResultado.textContent = "O miserável não é um gênio!!"
     baixoOuAlto.textContent = ""
-    resetGame()
+    endGame()
   } else {
     ultimoResultado.textContent = "Eroooou!!!"
     ultimoResultado.style.backgroundColor = "red"
@@ -38,8 +38,16 @@ function brincadeira() {
   }
 
   contagemPalpites++
-  campoPalpite.value = ''
+  campoPalpite.value = ""
   campoPalpite.focus()
 }
-
 envioPalpite.addEventListener("click", brincadeira)
+
+function endGame() {
+  campoPalpite.disabled = true
+  envioPalpite.disabled = true
+  const botaoReinicio = document.createElement("button")
+  botaoReinicio.textContent = "Iniciar novo game"
+  document.body.appendChild(botaoReinicio)
+  botaoReinicio.addEventListener("click", resetGame)
+}
