@@ -105,4 +105,4 @@ class ValidaFormulario {
   }
 }
 
-const validador = new ValidaFormulario()
+const validador = new ValidaFormulario() 
