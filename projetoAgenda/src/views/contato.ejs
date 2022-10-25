@@ -15,7 +15,7 @@
       <%if(contato._id){%>
         <form action="/contato/edit/<%=contato._id%>" method="POST">
       <%}else{%>
-        <form action="/contato/register" method="POST">
+        <form class="form-criar" action="/contato/register" method="POST">
         <%}%>
         <input type="hidden" name="_csrf" value="<%=csrfToken%>" />
         <div class="form-group">
@@ -25,7 +25,9 @@
             class="form-control"
             placeholder="Nome"
             name="nome"
+            id="inputName"
           />
+          <div class="error-nome text-danger"></div>
         </div>
         <div class="form-group">
           <label>Sobrenome</label>
@@ -36,6 +38,7 @@
             placeholder="Sobrenome"
             name="sobrenome"
           />
+          <div class="error-sobrenome text-danger"></div>
         </div>
         <div class="form-group">
           <label>Email</label>
@@ -46,6 +49,7 @@
             placeholder="Email"
             name="email"
           />
+          <div class="error-email text-danger"></div>
         </div>
         <div class="form-group">
           <label>Telefone</label>
@@ -53,12 +57,13 @@
           value="<%= contato.telefone %>"
             type="tel"
             class="form-control"
-            placeholder="Seu email"
+            placeholder="12345-6789"
             name="telefone"
           />
+          <div class="error-telefone text-danger"></div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn btn-primary" id="salvarContato">Salvar</button>
       </form>
     </div>
   </div>

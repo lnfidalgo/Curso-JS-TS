@@ -17,22 +17,25 @@ function Contato(body) {
   this.contato = null
 }
 
-Contato.prototype.register = async function() {
+Contato.prototype.register = async function () {
   this.valida()
   if (this.errors.length > 0) return
   this.contato = await ContatoModel.create(this.body)
 }
 
-Contato.prototype.valida = function() {
+Contato.prototype.valida = function () {
   this.cleanUp()
   if (!this.body.nome) this.errors.push("Nome precisa ser preenchido.")
-  if (this.body.email && !validator.isEmail(this.body.email)) this.errors.push("Email inválido.")
+  if (this.body.email && !validator.isEmail(this.body.email))
+    this.errors.push("Email inválido.")
   if (!this.body.telefone && !this.body.email) {
-    this.errors.push("Algum contato precisa ser cadastrado: 'email' ou 'telefone'")
+    this.errors.push(
+      "Algum contato precisa ser cadastrado: 'email' ou 'telefone'"
+    )
   }
 }
 
-Contato.prototype.cleanUp = function() {
+Contato.prototype.cleanUp = function () {
   for (const key in this.body) {
     if (typeof this.body[key] !== "string") {
       this.body[key] = ""
@@ -47,7 +50,7 @@ Contato.prototype.cleanUp = function() {
   }
 }
 
-Contato.prototype.edit = async function(id) {
+Contato.prototype.edit = async function (id) {
   if (typeof id !== "string") return
   this.valida()
   if (this.errors.length > 0) return
@@ -58,9 +61,20 @@ Contato.prototype.edit = async function(id) {
 
 // Métodos estáticos
 
-Contato.buscaPorId = async function(id) {
+Contato.buscaPorId = async function (id) {
   if (typeof id !== "string") return
   const contato = await ContatoModel.findById(id)
+  return contato
+}
+
+Contato.buscaContatos = async function () {
+  const contatos = await ContatoModel.find().sort({ criadoEm: -1 })
+  return contatos
+}
+
+Contato.delete = async function (id) {
+  if (typeof id !== "string") return
+  const contato = await ContatoModel.findOneAndDelete({_id: id})
   return contato
 }
 

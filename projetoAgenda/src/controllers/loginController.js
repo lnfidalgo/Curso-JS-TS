@@ -12,7 +12,6 @@ exports.register = async function (req, res) {
 
     if (login.errors.length > 0) {
       req.flash("errors", login.errors)
-      console.log("1 - loginController")
       req.session.save(function () {
         return res.redirect("/login/index")
       })
