@@ -1,21 +1,21 @@
 require("dotenv").config()
-const express = require("express")  // Iniciando o express
+const express = require("express") // Iniciando o express
 const app = express() // Iniciando o express
 const mongoose = require("mongoose")
 mongoose
   .connect(process.env.CONNECTIONSTRING, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   })
   .then(() => {
-    app.emit("pronto")  // Quando estiver conectado, emite evento 
+    app.emit("pronto") // Quando estiver conectado, emite evento
   })
   .catch(e => console.log(e))
 
 const session = require("express-session") // Identificar a sessão do cliente
 const MongoStore = require("connect-mongo") // Usado para salvar as sessões na DB
 const flash = require("connect-flash") // Mensagens auto-destrutivas, bom para mandar mensagens de erro, salvas em sessão
-const router = require("./routes") // Identificar as rotas 
+const router = require("./routes") // Identificar as rotas
 const path = require("path")
 const helmet = require("helmet") // Deixar aplicação mais segura
 const csrf = require("csurf") // Segurança gerando tokens de sessão, ler para mais
@@ -23,7 +23,11 @@ const meuMiddleware = require("./src/middlewares/middleware")
 const middlewareErro = require("./src/middlewares/middlewareErro")
 const middlewareCsrf = require("./src/middlewares/middlewareCsrfToken")
 
-app.use(helmet())
+app.use(
+  helmet({
+    contentSecurityPolicy: false
+  })
+)
 
 app.use(express.urlencoded({ extended: true })) // Podemos postar form para nossa app
 app.use(express.json()) // Fazer parse de json para a app
