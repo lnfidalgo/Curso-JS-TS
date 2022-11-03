@@ -1,7 +1,7 @@
 class Validador {
   constructor(cpfDigitado) {
-    Object.defineProperty(this, 'cpfLimpo', {
-      value: cpfDigitado.replace(/\D+/g, '')
+    Object.defineProperty(this, "cpfLimpo", {
+      value: cpfDigitado.replace(/\D+/g, "")
     })
   }
 
@@ -13,7 +13,7 @@ class Validador {
 
     let cpfSemDigito = this.cpfLimpo.slice(0, 9)
     const digito1 = Validador.criaDigito(cpfSemDigito)
-    const digito2 = Validador.criaDigito(cpfSemDigito+ digito1)
+    const digito2 = Validador.criaDigito(cpfSemDigito + digito1)
     const cpfNovo = `${cpfSemDigito}${digito1}${digito2}`
     return cpfNovo === this.cpfLimpo
   }
@@ -33,13 +33,13 @@ class Validador {
     }, 0)
 
     const digito = 11 - (total % 11)
-    return digito > 9 ? '0' : String(digito)
+    return digito > 9 ? "0" : String(digito)
   }
 }
 
-const cpf = new Validador('18793211732')
+const cpf = new Validador("28895213672")
 if (cpf.valida()) {
-  console.log('CPF válido.')
+  console.log("CPF válido.")
 } else {
-  console.log('CPF inválido')
+  console.log("CPF inválido")
 }
