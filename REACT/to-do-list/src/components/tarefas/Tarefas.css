@@ -1,0 +1,42 @@
+.tarefas {
+  margin-top: 20px;
+}
+
+.tarefas li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.tarefas li:hover {
+  background-color: #acdfee;
+  transition: all 250ms;
+  border-radius: 4px;
+}
+
+.tarefas li .editButton {
+  margin-right: 15px;
+  color: #5c90cc;
+}
+
+.tarefas li .deleteButton {
+  color: #e4572c;
+}
+
+.tarefas li .editButton,
+.tarefas li .deleteButton {
+  cursor: pointer;
+}
+
+.tarefas li .editButton:hover,
+.tarefas li .deleteButton:hover {
+  color: #000;
+  transition:  all 250ms;
+}
+
+.editAndDeleteButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
