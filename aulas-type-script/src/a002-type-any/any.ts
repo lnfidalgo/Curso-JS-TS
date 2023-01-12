@@ -5,4 +5,4 @@ function showMessage(msg: any) {
 
 console.log(showMessage('Teste'));
 console.log(showMessage([1, 2, 3]));
-console.log(showMessage(1));
+console.log(showMessage(12));
