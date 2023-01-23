@@ -24,3 +24,5 @@ function sum(x: number, y: number): number {
 }
 
 const sum2: (x: number, y: number) => number = (x, y) => x + y;
+
+export {person};

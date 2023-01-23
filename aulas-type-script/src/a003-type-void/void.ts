@@ -3,7 +3,7 @@ function noReturn(...args: string[]): void {
   console.log(args.join(' '));
 }
 
-const pessoa = {
+const person = {
   name: 'Lucas',
   surname: 'Nascimento',
 
@@ -13,6 +13,6 @@ const pessoa = {
 };
 
 noReturn('Lucas', 'Fidalgo');
-pessoa.showName();
+person.showName();
 
-export { pessoa };
+export { person };
