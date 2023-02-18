@@ -15,5 +15,5 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["src", "../aulas/class/class-test/src/basic-class.ts"]
+  "include": ["src"]
 }
