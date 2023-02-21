@@ -1,15 +1,20 @@
 export class Person {
-  readonly name: string;
-  readonly surname: string;
-  private readonly cpf: string;
-  protected readonly fullName: string;
+  constructor(
+    public name: string,
+    public surname: string,
+    private age: number,
+    protected cpf: string
+  ) {}
 
-  constructor(name: string, surname: string) {
-    this.name = name
-    this.surname = surname
+  getAge(): number {
+    return this.age;
   }
 
-  getCPF():string {
+  getCpf(): string {
+    return this.cpf;
+  }
 
+  getFullName(): string {
+    return this.name + " " + this.surname;
   }
 }
