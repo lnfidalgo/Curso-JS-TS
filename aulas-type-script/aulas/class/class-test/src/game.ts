@@ -1,5 +1,9 @@
 export abstract class Character {
-  constructor(protected name: string, protected atack: number, protected life: number) {}
+  constructor (
+    protected name: string,
+    protected atack: number,
+    protected life: number
+  ) {}
 
   receiveAtack(oponent: Character): void {
     this.bordao()
@@ -7,8 +11,8 @@ export abstract class Character {
   }
 
   protected loseLife(atackPower: number): void {
-    this.life-=atackPower
-    console.log(`${this.name} is losing life, ${this.life} life points`)
+    this.life -= atackPower
+    console.log(`${ this.name } is losing life, ${ this.life } life points`)
   }
 
   abstract bordao(): void
@@ -25,7 +29,7 @@ export class Monster extends Character {
   }
 }
 
-const wizard=new Mage('fimage', 100, 1000)
-const monstrin=new Mage('cruscredo', 80, 1000)
+const wizard = new Mage('fimage', 100, 1000)
+const monstrin = new Mage('cruscredo', 80, 1000)
 
 wizard.receiveAtack(monstrin)
