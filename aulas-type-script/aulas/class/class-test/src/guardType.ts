@@ -5,25 +5,25 @@ export function add(a: unknown, b: unknown): number | string {
 console.log(add(1, 2))
 console.log(add('Lu', 'cas'))
 
-type Person = { tipo: 'pessoa', name: 'Fidalgo' }
-type Animal = { tipo: 'animal', name: 'Lião' }
+type Person = { tipo: 'pessoa', name: string }
+type Animal = { tipo: 'animal', cor: string }
 type PersonOrAnimal = Person | Animal
 
 export class Aluno implements Person {
   tipo: 'pessoa' = 'pessoa'
-  constructor (public nome: string) {}
-  name: "Fidalgo"
+  constructor (public name: string) {}
+
 }
 
 function mostraNome(obj: PersonOrAnimal): void {
-  if ('name' in obj) console.log(obj.name)
-  if (obj instanceof Aluno) console.log(obj.name)
+  //if ('name' in obj) console.log(obj.name)
+  //if (obj instanceof Aluno) console.log(obj.name)
   switch (obj.tipo) {
     case 'pessoa':
       console.log(obj.name)
       return
     case 'animal':
-      console.log(obj.name)
+      console.log(obj.cor)
       return
   }
 }
