@@ -1,5 +1,5 @@
 export class Message {
   sendMessage(msg: string): void {
-    console.log(msg);
+    console.log('Mensagem enviada com sucesso: ', msg);
   }
 }
