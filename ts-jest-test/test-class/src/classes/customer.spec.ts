@@ -32,8 +32,8 @@ describe('IndividualCustumer', () => {
   });
 });
 
-describe('EnterpriseCustumer', () => {
-  it('should have firstName, lastName, cpf ', () => {
+describe('EnterpriseCustomer', () => {
+  it('should have name and cnpj ', () => {
     const sut = createEnterpriseCustomer('Cambotas', '4002.8922');
     expect(sut).toHaveProperty('name', 'Cambotas');
     expect(sut).toHaveProperty('cnpj', '4002.8922');
@@ -41,7 +41,7 @@ describe('EnterpriseCustumer', () => {
 
   it('should have methods get name and idn for EnterpriseCustomer', () => {
     const sut = createEnterpriseCustomer('Cambotas', '4002.8922');
-    expect(sut).toHaveProperty('name', 'Cambotas');
-    expect(sut).toHaveProperty('cnpj', '4002.8922');
+    expect(sut.getName()).toBe('Cambotas');
+    expect(sut.getIDN()).toBe('4002.8922');
   });
 });
