@@ -28,3 +28,20 @@
   color: green;
   font-weight: bold;
 }
+
+button {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #00000059;
+  background-color: bisque;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.button {
+  color: blue
+}
+
+.teste-cor {
+  color: red
+}
